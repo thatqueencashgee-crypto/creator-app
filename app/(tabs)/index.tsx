@@ -123,7 +123,7 @@ export default function FeedScreen() {
           <PostCard
             post={item}
             isUnlocked={isPostUnlocked(item.id, item.requiredTier, item.price)}
-            onPress={() => router.push(`/post/${item.id}`)}
+            onPress={() => router.push(`/post/${item.id}` as any)}
           />
         )}
       />
