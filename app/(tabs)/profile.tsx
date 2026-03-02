@@ -106,6 +106,37 @@ export default function ProfileScreen() {
           </Pressable>
         </View>
 
+        {/* Creator Tools */}
+        <View style={styles.toolsSection}>
+          <Text style={styles.sectionTitle}>Creator Tools</Text>
+          <View style={styles.toolsGrid}>
+            <Pressable
+              onPress={() => router.push("/book-session" as any)}
+              style={({ pressed }) => [styles.toolCard, pressed && { opacity: 0.8 }]}
+            >
+              <Text style={styles.toolEmoji}>🎥</Text>
+              <Text style={styles.toolLabel}>Book a Session</Text>
+              <Text style={styles.toolSub}>1-on-1 video call</Text>
+            </Pressable>
+            <Pressable
+              onPress={() => router.push("/dashboard" as any)}
+              style={({ pressed }) => [styles.toolCard, pressed && { opacity: 0.8 }]}
+            >
+              <Text style={styles.toolEmoji}>📊</Text>
+              <Text style={styles.toolLabel}>Dashboard</Text>
+              <Text style={styles.toolSub}>Earnings & stats</Text>
+            </Pressable>
+            <Pressable
+              onPress={() => router.push("/new-post" as any)}
+              style={({ pressed }) => [styles.toolCard, styles.toolCardHighlight, pressed && { opacity: 0.8 }]}
+            >
+              <Text style={styles.toolEmoji}>✏️</Text>
+              <Text style={[styles.toolLabel, { color: "#0A0A0A" }]}>New Post</Text>
+              <Text style={[styles.toolSub, { color: "#333" }]}>Create content</Text>
+            </Pressable>
+          </View>
+        </View>
+
         {/* Content Grid */}
         <View style={styles.gridSection}>
           <Text style={styles.sectionTitle}>Content</Text>
@@ -365,5 +396,42 @@ const styles = StyleSheet.create({
     color: "#FFD600",
     fontSize: 10,
     fontWeight: "700",
+  },
+  toolsSection: {
+    paddingHorizontal: 16,
+    marginBottom: 20,
+  },
+  toolsGrid: {
+    flexDirection: "row",
+    gap: 10,
+  },
+  toolCard: {
+    flex: 1,
+    backgroundColor: "#1A1A1A",
+    borderRadius: 16,
+    padding: 14,
+    alignItems: "center",
+    gap: 4,
+    borderWidth: 0.5,
+    borderColor: "#2A2A2A",
+  },
+  toolCardHighlight: {
+    backgroundColor: "#FFD600",
+    borderColor: "#FFD600",
+  },
+  toolEmoji: {
+    fontSize: 26,
+    marginBottom: 2,
+  },
+  toolLabel: {
+    color: "#F5F5F5",
+    fontSize: 12,
+    fontWeight: "700",
+    textAlign: "center",
+  },
+  toolSub: {
+    color: "#888",
+    fontSize: 10,
+    textAlign: "center",
   },
 });

@@ -33,3 +33,9 @@
 - [x] Haptic feedback on key actions
 - [x] Loading states and empty states
 - [x] Regenerate logo with money sign symbol in black & yellow
+
+## New Features (Round 2)
+- [x] Book a Session screen (schedule & pay for 1-on-1 video call slot)
+- [x] Creator Earnings Dashboard screen (revenue, subscribers, top posts)
+- [x] New Post Upload flow (title, description, media, tier, PPV price)
+- [x] Wire up navigation to all three new screens from Profile tab (Creator Tools section)
