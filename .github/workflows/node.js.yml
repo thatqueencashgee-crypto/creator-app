@@ -9,6 +9,9 @@ on:
   pull_request:
     branches: [ "mainn" ]
 
+permissions:
+  contents: read
+
 jobs:
   build:
 
